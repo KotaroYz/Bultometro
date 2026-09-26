@@ -84,7 +84,6 @@ main a{
     margin-bottom: 0.5rem;
 }
 
-/* ===== TARJETAS (estilo unificado) ===== */
 .muro-ladrillo,
 .viga-hormigon,
 .columna-hormigon,
@@ -116,7 +115,6 @@ main a{
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Íconos de las tarjetas */
 .muro-ladrillo svg,
 .viga-hormigon svg,
 .columna-hormigon svg,
@@ -146,7 +144,6 @@ main a{
     border-radius: 12px;
 }
 
-/* Título de las tarjetas */
 .muro-ladrillo h2,
 .viga-hormigon h2,
 .columna-hormigon h2,
@@ -165,7 +162,7 @@ main a{
     color: #da4343;
     margin-bottom: 0.5rem;
 }
-/* Descripción de las tarjetas */
+
 .muro-ladrillo p,
 .viga-hormigon p,
 .columna-hormigon p,
@@ -180,7 +177,6 @@ main a{
     color: #8a8a8a;
 }
 
-/* Enlace "Calcular ahora" */
 .muro-ladrillo a,
 .viga-hormigon a,
 .columna-hormigon a,
