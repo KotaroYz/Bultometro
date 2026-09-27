@@ -20,9 +20,7 @@ body {
     width: 100%;
     max-width: 420px;
     border-radius: 20px;
-    height: 100%;
-    max-height: 650px;
-    padding: 30px 26px;
+    padding: 40px 36px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
     text-align: center;
 }
@@ -33,10 +31,10 @@ body {
     justify-content: center;
     width: 52px;
     height: 52px;
+    padding: 0.8rem;
     background-color: #fff4ec;
     border-radius: 50%;
-    margin: 0 auto 10px;
-    padding: 0.8rem;
+    margin: 0 auto 20px;
 }
 
 .card__title {
@@ -44,13 +42,14 @@ body {
     font-weight: 800;
     color: #1a1a1a;
     letter-spacing: -0.5px;
-    margin-bottom: 2px;
+    margin-bottom: 8px;
 }
 
 .card__subtitle {
     font-size: 13px;
     color: #8a8a8a;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
+    line-height: 1.5;
 }
 
 .form {
@@ -69,8 +68,7 @@ body {
     margin-bottom: 8px;
 }
 
-.form__group input,
-.form__group select {
+.form__group input {
     width: 100%;
     padding: 13px 16px;
     font-size: 13px;
@@ -87,25 +85,27 @@ body {
     color: #b0b0b0;
 }
 
-.form__group input:focus,
-.form__group select:focus {
+.form__group input:focus {
     border-color: #e07a3f;
     background-color: #ffffff;
 }
 
-.form__group select {
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    background-size: 16px;
-    padding-right: 40px;
-    cursor: pointer;
-    color: #6b6b6b;
+.form__error {
+    display: none;
+    font-size: 12px;
+    color: #dc2626;
+    background-color: #fee2e2;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    text-align: center;
 }
 
-.btn-registrar {
+.form__error.show {
+    display: block;
+}
+
+.btn-primary {
     width: 100%;
     padding: 15px;
     font-size: 14px;
@@ -120,26 +120,74 @@ body {
     transition: background-color 0.2s, transform 0.1s;
 }
 
-.btn-registrar:hover {
+.btn-primary:hover {
     background-color: #d96c1f;
 }
 
-.btn-registrar:active {
+.btn-primary:active {
     transform: scale(0.98);
 }
 
-.card__footer {
-    margin-top: 20px;
+.btn-secondary {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    color: #1a1a1a;
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-secondary:hover {
+    background-color: #ececec;
+}
+
+.btn-secondary:active {
+    transform: scale(0.98);
+}
+
+.confirmacion {
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+}
+
+.confirmacion__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #dcfce7;
+    border-radius: 50%;
+    margin: 0 auto 18px;
+}
+
+.confirmacion__title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.confirmacion__text {
     font-size: 13px;
     color: #6b6b6b;
+    line-height: 1.6;
+    margin-bottom: 8px;
 }
 
-.card__footer a {
-    color: #2563eb;
-    font-weight: 600;
-    text-decoration: none;
+.confirmacion__text strong {
+    color: #1a1a1a;
 }
 
-.card__footer a:hover {
-    text-decoration: underline;
+.confirmacion__hint {
+    font-size: 12px;
+    color: #b0b0b0;
+    margin-bottom: 24px;
 }
+

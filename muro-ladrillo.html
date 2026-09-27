@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bultómetro - Calcular Muro de Ladrillo</title>
+    <link rel="stylesheet" href="css/calcular.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="header__back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Volver al Menú
+        </a>
+        <span class="header__title">Bultómetro</span>
+        <div class="header__spacer"></div>
+    </header>
+    <main class="container">
+        <section class="panel">
+            <h1 class="panel__title">Parámetros del Muro</h1>
+            <p class="panel__subtitle">Especifica las dimensiones</p>
+
+            <form class="form" id="muroForm">
+                <div class="form__group">
+                    <label for="espesor">Espesor del Muro</label>
+                    <select id="espesor" name="espesor">
+                        <option value="20" selected>20cm</option>
+                        <option value="30">30cm</option>
+                    </select>
+                </div>
+
+                <div class="form__group">
+                    <label for="largo">Largo (m)</label>
+                    <input type="number" id="largo" name="largo" step="0.01" min="0.1" value="12.5" required>
+                </div>
+
+                <div class="form__group">
+                    <label for="alto">Alto (m)</label>
+                    <input type="number" id="alto" name="alto" step="0.01" min="0.1" value="2.40" required>
+                </div>
+
+                <button type="submit" class="btn-calcular">Calcular Materiales</button>
+            </form>
+        </section>
+        <section class="panel">
+            <h2 class="panel__title">Resultado del Cómputo</h2>
+            <div class="resultado-total">
+                <span class="resultado-total__label">Superficie total</span>
+                <span class="resultado-total__value" id="superficieTotal">30 m²</span>
+            </div>
+            <ul class="resultado-lista">
+                <li class="resultado-item">
+                    <span class="resultado-item__dot"></span>
+                    <span class="resultado-item__nombre">Cemento</span>
+                    <span class="resultado-item__valor" id="totalCemento">327 kg</span>
+                </li>
+                <li class="resultado-item">
+                    <span class="resultado-item__dot"></span>
+                    <span class="resultado-item__nombre">Arena</span>
+                    <span class="resultado-item__valor" id="totalArena">2.7 m³</span>
+                </li>
+                <li class="resultado-item">
+                    <span class="resultado-item__dot"></span>
+                    <span class="resultado-item__nombre">Ladrillos Huecos (8×18×33)</span>
+                    <span class="resultado-item__valor" id="totalLadrillos">2700 unidades</span>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+</html>

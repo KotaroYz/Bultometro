@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bultómetro - Calcular Viga de Hormigón</title>
+    <link rel="stylesheet" href="css/calcular.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="header__back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Volver al Menú
+        </a>
+        <span class="header__title">Bultómetro</span>
+        <div class="header__spacer"></div>
+    </header>
+    <main class="container">
+        <section class="panel">
+            <h1 class="panel__title">Parámetros de la Viga</h1>
+            <p class="panel__subtitle">Especifica las dimensiones</p>
+
+            <form class="form" id="muroForm">
+                <div class="form__group">
+                    <label for="largo">Largo de la viga (m)</label>
+                    <input type="number" id="largo" name="largo" step="0.01" min="0.1" value="6.5" required>
+                </div>
+                <button type="submit" class="btn-calcular">Calcular Materiales</button>
+            </form>
+        </section>
+        <section class="panel">
+            <h2 class="panel__title">Resultado del Cómputo</h2>
+            <div class="resultado-total">
+                <span class="resultado-total__label">Metros Lineales</span>
+                <span class="resultado-total__value" id="superficieTotal">6.5m</span>
+            </div>
+            <ul class="resultado-lista">
+                <li class="resultado-item">
+                    <span class="resultado-item__dot"></span>
+                    <span class="resultado-item__nombre">Cemento</span>
+                    <span class="resultado-item__valor" id="totalCemento">58.5 kg</span>
+                </li>
+                <li class="resultado-item">
+                    <span class="resultado-item__dot"></span>
+                    <span class="resultado-item__nombre">Arena</span>
+                    <span class="resultado-item__valor" id="totalArena">0.13 m³</span>
+                </li>
+                <li class="resultado-item">
+                    <span class="resultado-item__dot"></span>
+                    <span class="resultado-item__nombre">Piedra</span>
+                    <span class="resultado-item__valor" id="totalLadrillos">0.13 m²</span>
+                </li>
+                <li class="resultado-item">
+                    <span class="resultado-item__dot"></span>
+                    <span class="resultado-item__nombre">Hierro del 8</span>
+                    <span class="resultado-item__valor" id="totalLadrillos">26 m</span>
+                </li>
+                <li class="resultado-item">
+                    <span class="resultado-item__dot"></span>
+                    <span class="resultado-item__nombre">Hierro del 4.2</span>
+                    <span class="resultado-item__valor" id="totalLadrillos">19.5m</span>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+</html>

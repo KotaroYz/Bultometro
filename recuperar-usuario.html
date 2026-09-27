@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bultómetro - Recuperar Contraseña</title>
+    <link rel="stylesheet" href="css/recuperar-usuario.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 24 24" fill="none" stroke="#ff4d00" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ruler"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg>    
+        </div>
+        <h1 class="card__title">Recuperar Contraseña</h1>
+        <p class="card__subtitle">Ingresa tu correo y te enviaremos un enlace para restablecerla</p>
+
+        <form class="form" id="recuperarForm">
+            <div class="form__group">
+                <label for="correo">Usuario (Correo)</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@empresa.com" required>
+            </div>
+            <p class="form__error" id="errorMsg"></p>
+
+            <button type="submit" class="btn-primary">Enviar enlace de recuperación</button>
+        </form>
+        <div class="confirmacion" id="confirmacion" style="display: none;">
+            <div class="confirmacion__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h2 class="confirmacion__title">¡Correo enviado!</h2>
+            <p class="confirmacion__text">
+                Hemos enviado un enlace de recuperación a<br>
+                <strong id="correoEnviado"></strong>
+            </p>
+            <p class="confirmacion__hint">
+                Revisa tu bandeja de entrada y sigue las instrucciones.
+            </p>
+            <button class="btn-secondary" id="btnVolver">Volver al inicio de sesión</button>
+        </div>
+        <p class="card__footer" id="footerLink">
+            ¿Recordaste tu contraseña? <a href="login.html">Iniciar Sesión</a>
+        </p>
+    </div>
+</body>
+</html>
